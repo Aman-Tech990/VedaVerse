@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router";
 import { ChevronLeft, ChevronRight, Play, Pause, Droplets, Leaf, Heart, Brain, Shield } from "lucide-react";
-import Footer from "@/components/Footer";
 import DoshaQuiz from "@/components/Doshaquiz";
 
 const panchakarmaTherapy = [
@@ -647,6 +646,8 @@ const HeroSection = () => {
                     </Link>
                 </div>
             </section>
+
+
 
         </div>
     );
