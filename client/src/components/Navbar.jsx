@@ -107,7 +107,7 @@ const Navbar = () => {
                                 <AyurvedicLeaf className="w-8 h-8 text-emerald-500/50" />
                             </motion.div>
                         </motion.div>
-                        <h1 className='text-3xl font-bold bg-gradient-to-r from-green-700 via-emerald-600 to-teal-600 bg-clip-text text-transparent'>
+                        <h1 className='text-3xl font-bold bg-gradient-to-r from-green-600 via-yellow-400 to-purple-700 bg-clip-text text-transparent'>
                             VedaVerse
                         </h1>
                     </motion.div>
@@ -166,7 +166,7 @@ const Navbar = () => {
                         <motion.div animate={{ rotate: [0, 360] }} transition={{ duration: 15, repeat: Infinity, ease: "linear" }}>
                             <Leaf className="w-6 h-6 text-green-600" />
                         </motion.div>
-                        <h1 className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-green-700 via-emerald-600 to-teal-600 bg-clip-text text-transparent">
+                        <h1 className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-green-600 via-yellow-400 to-purple-700 bg-clip-text text-transparent">
                             VedaVerse
                         </h1>
                     </motion.div>
