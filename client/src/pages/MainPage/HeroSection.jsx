@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router";
 import { ChevronLeft, ChevronRight, Play, Pause, Droplets, Leaf, Heart, Brain, Shield } from "lucide-react";
 import DoshaQuiz from "@/components/Doshaquiz";
+import Footer from "@/components/Footer";
 
 const panchakarmaTherapy = [
     {
@@ -233,20 +234,13 @@ const HeroSection = () => {
                     className="mb-4 md:mb-6"
                 >
                     <motion.h1
-                        className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold bg-gradient-to-r from-green-700 via-emerald-600 to-teal-600 bg-clip-text text-transparent mt-5"
+                        className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold bg-gradient-to-r from-green-600 via-yellow-400 to-purple-700 bg-clip-text text-transparent mt-5"
                         animate={{
                             backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
                         }}
                         transition={{ duration: 5, repeat: Infinity }}
                     >
-                        Welcome to{" "}
-                        <motion.span
-                            className="inline-block bg-gradient-to-r from-orange-500 to-amber-500 bg-clip-text text-transparent"
-                            animate={{ scale: [1, 1.05, 1] }}
-                            transition={{ duration: 2, repeat: Infinity }}
-                        >
-                            VedaVerse
-                        </motion.span>
+                        Welcome to VedaVerse
                     </motion.h1>
                 </motion.div>
 
@@ -255,7 +249,7 @@ const HeroSection = () => {
                     initial={{ y: 50, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ delay: 0.3, duration: 1.2 }}
-                    className="mt-2 sm:mt-4 text-base sm:text-lg md:text-xl lg:text-2xl max-w-4xl text-green-800/80 leading-relaxed px-4"
+                    className="mt-2 sm:mt-4 text-base sm:text-lg md:text-xl lg:text-2xl max-w-4xl text-purple-950 leading-relaxed px-4 font-semibold"
                 >
                     Discover the ancient art of Panchakarma and rejuvenate your mind and body with modern wellness experiences.
                 </motion.p>
@@ -274,9 +268,9 @@ const HeroSection = () => {
                                 boxShadow: "0 15px 30px rgba(34, 197, 94, 0.3)",
                             }}
                             whileTap={{ scale: 0.95 }}
-                            className="group px-6 py-3 md:px-8 md:py-4 rounded-2xl bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-semibold shadow-lg text-sm md:text-base lg:text-lg transition-all duration-300 hover:cursor-pointer"
+                            className="group px-6 py-3 md:px-8 md:py-4 rounded-2xl bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-black font-semibold shadow-lg text-sm md:text-base lg:text-lg transition-all duration-300 hover:cursor-pointer"
                         >
-                            <span className="flex items-center justify-center gap-2">
+                            <span className="flex items-center justify-center gap-2 text-white">
                                 Schedule my Therapy
                                 <motion.div
                                     animate={{ x: [0, 5, 0] }}
@@ -311,7 +305,7 @@ const HeroSection = () => {
                     className="mt-12 sm:mt-16 w-full max-w-5xl"
                 >
                     <motion.h2
-                        className="text-2xl sm:text-3xl lg:text-4xl font-bold text-green-800 mb-2 md:mb-4"
+                        className="text-2xl sm:text-3xl lg:text-4xl font-bold text-orange-900 mb-2 md:mb-4"
                         animate={{ scale: [1, 1.02, 1] }}
                         transition={{ duration: 3, repeat: Infinity }}
                     >
@@ -322,7 +316,7 @@ const HeroSection = () => {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 1.2, duration: 1 }}
-                        className="text-center text-sm sm:text-base lg:text-lg text-green-700 max-w-2xl mx-auto mb-8 px-4"
+                        className="text-center text-sm sm:text-base lg:text-lg text-purple-950 max-w-2xl mx-auto mb-8 px-4 font-semibold"
                     >
                         Explore the five main therapies designed to detoxify, rejuvenate, and harmonize your body, mind, and soul.
                     </motion.p>
@@ -522,7 +516,7 @@ const HeroSection = () => {
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 1 }}
-                        className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-green-800 text-center mb-6"
+                        className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-orange-900 text-center mb-6"
                     >
                         What is Panchakarma?
                     </motion.h2>
@@ -530,7 +524,7 @@ const HeroSection = () => {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.3, duration: 1 }}
-                        className="max-w-3xl mx-auto text-center text-green-700 text-base sm:text-lg md:text-xl leading-relaxed"
+                        className="max-w-3xl mx-auto text-center text-purple-950 font-semibold text-base sm:text-lg md:text-xl leading-relaxed"
                     >
                         Panchakarma is an ancient Ayurvedic detoxification and rejuvenation process designed to cleanse the body of toxins, restore balance to the doshas, and promote holistic well-being. Through a series of specialized therapies including Vamana, Virechana, Basti, Nasya, and Raktamokshana, Panchakarma targets both physical and mental wellness, enhancing vitality, immunity, and mental clarity. This timeless practice rejuvenates your body, sharpens your mind, and harmonizes your soul, empowering you to experience a healthier, more vibrant life.
                     </motion.p>
@@ -539,12 +533,12 @@ const HeroSection = () => {
 
             {/* Services Section */}
             <div>
-                <section className="relative z-10 w-full py-10 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-emerald-50 via-green-100 to-teal-50">
+                <section className="relative z-10 w-full p-4 sm:px-6 lg:px-8 bg-gradient-to-br from-emerald-50 via-green-100 to-teal-50">
                     <motion.h2
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 1 }}
-                        className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-green-800 text-center mb-12"
+                        className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-orange-900 text-center mb-12"
                     >
                         Our Featured Services
                     </motion.h2>
@@ -555,7 +549,7 @@ const HeroSection = () => {
                                 initial={{ opacity: 0, y: 30 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: idx * 0.2, duration: 0.6 }}
-                                className="bg-white/80 backdrop-blur-lg rounded-2xl p-6 shadow-lg border border-white/30 hover:scale-105 transition-transform duration-300 text-green-800 font-semibold text-center text-sm md:text-base"
+                                className="bg-white/80 backdrop-blur-lg rounded-2xl p-6 shadow-lg border border-white/30 hover:scale-105 transition-transform duration-300 text-purple-950 font-semibold text-center text-lg md:text-xl"
                             >
                                 {service}
                             </motion.div>
@@ -570,7 +564,7 @@ const HeroSection = () => {
                     initial={{ opacity: 0, y: 50 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1 }}
-                    className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-green-800 text-center mb-12"
+                    className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-orange-900 text-center mb-12"
                 >
                     Why Choose VedaVerse?
                 </motion.h2>
@@ -583,9 +577,9 @@ const HeroSection = () => {
                         transition={{ delay: 0.1, duration: 0.6 }}
                         className="bg-white/80 backdrop-blur-lg rounded-2xl p-6 shadow-lg border border-white/30 flex flex-col items-center text-center hover:scale-105 transition-transform duration-300"
                     >
-                        <Shield className="w-12 h-12 text-green-600 mb-4" />
-                        <h3 className="font-semibold text-lg text-green-800 mb-2">Safe & Certified</h3>
-                        <p className="text-sm text-green-700">
+                        <Shield className="w-12 h-12 text-purple-950 mb-4" />
+                        <h3 className="font-semibold text-xl text-purple-950 mb-2">Safe & Certified</h3>
+                        <p className="text-md font-semibold text-purple-950">
                             All therapies are guided by certified Ayurvedic experts ensuring maximum safety.
                         </p>
                     </motion.div>
@@ -597,9 +591,9 @@ const HeroSection = () => {
                         transition={{ delay: 0.2, duration: 0.6 }}
                         className="bg-white/80 backdrop-blur-lg rounded-2xl p-6 shadow-lg border border-white/30 flex flex-col items-center text-center hover:scale-105 transition-transform duration-300"
                     >
-                        <Heart className="w-12 h-12 text-green-600 mb-4" />
-                        <h3 className="font-semibold text-lg text-green-800 mb-2">Holistic Wellness</h3>
-                        <p className="text-sm text-green-700">
+                        <Heart className="w-12 h-12 text-purple-950 mb-4" />
+                        <h3 className="font-semibold text-xl text-purple-950 mb-2">Holistic Wellness</h3>
+                        <p className="text-md font-semibold text-purple-950">
                             Mind, body, and soul rejuvenation with personalized Panchakarma plans.
                         </p>
                     </motion.div>
@@ -611,9 +605,9 @@ const HeroSection = () => {
                         transition={{ delay: 0.3, duration: 0.6 }}
                         className="bg-white/80 backdrop-blur-lg rounded-2xl p-6 shadow-lg border border-white/30 flex flex-col items-center text-center hover:scale-105 transition-transform duration-300"
                     >
-                        <Brain className="w-12 h-12 text-green-600 mb-4" />
-                        <h3 className="font-semibold text-lg text-green-800 mb-2">Mental Clarity</h3>
-                        <p className="text-sm text-green-700">
+                        <Brain className="w-12 h-12 text-purple-950 mb-4" />
+                        <h3 className="font-semibold text-xl text-purple-950 mb-2">Mental Clarity</h3>
+                        <p className="text-md font-semibold text-purple-950">
                             Reduce stress, enhance focus, and boost mental performance with targeted therapies.
                         </p>
                     </motion.div>
@@ -625,9 +619,9 @@ const HeroSection = () => {
                         transition={{ delay: 0.4, duration: 0.6 }}
                         className="bg-white/80 backdrop-blur-lg rounded-2xl p-6 shadow-lg border border-white/30 flex flex-col items-center text-center hover:scale-105 transition-transform duration-300"
                     >
-                        <Droplets className="w-12 h-12 text-green-600 mb-4" />
-                        <h3 className="font-semibold text-lg text-green-800 mb-2">Detox & Rejuvenate</h3>
-                        <p className="text-sm text-green-700">
+                        <Droplets className="w-12 h-12 text-purple-950 mb-4" />
+                        <h3 className="font-semibold text-xl text-purple-950 mb-2">Detox & Rejuvenate</h3>
+                        <p className="text-md font-semibold text-purple-950">
                             Cleanse your body naturally and boost immunity for long-term health benefits.
                         </p>
                     </motion.div>
@@ -646,9 +640,7 @@ const HeroSection = () => {
                     </Link>
                 </div>
             </section>
-
-
-
+            <Footer />
         </div>
     );
 };

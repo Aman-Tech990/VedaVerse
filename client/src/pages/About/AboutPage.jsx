@@ -31,7 +31,7 @@ const AboutPage = () => {
         <div className="bg-gradient-to-b from-green-50 via-emerald-50 to-teal-50 min-h-screen overflow-hidden">
 
             {/* -------- HERO SECTION -------- */}
-            <section className="relative text-center py-20 px-4 overflow-hidden">
+            <section className="relative text-center py-16 px-4 overflow-hidden">
                 {/* Animated blobs */}
                 <motion.div
                     className="absolute -top-20 -left-20 w-72 h-72 bg-green-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30"
@@ -48,16 +48,16 @@ const AboutPage = () => {
                     initial={{ opacity: 0, y: -40 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
-                    className="text-5xl md:text-6xl font-extrabold text-green-800 drop-shadow-lg"
+                    className="text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-green-600 via-yellow-400 to-purple-700 bg-clip-text text-transparent drop-shadow-lg"
                 >
-                    Panchakarma <span className="text-emerald-600">Reimagined</span>
+                    Panchakarma Reimagined
                 </motion.h1>
 
                 <motion.p
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.3, duration: 0.8 }}
-                    className="text-green-700 max-w-3xl mx-auto mt-6 text-lg md:text-xl leading-relaxed"
+                    className="text-purple-950 font-semibold max-w-3xl mx-auto mt-6 text-lg md:text-xl leading-relaxed"
                 >
                     Detoxify 🌿 Rejuvenate ✨ Restore balance ⚖️ <br />
                     Experience Ayurveda’s most powerful healing journey, tailored for your body, mind, and soul.
@@ -87,9 +87,9 @@ const AboutPage = () => {
                     initial={{ opacity: 0, y: -30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
-                    className="text-4xl md:text-5xl font-bold text-green-800 mb-8 text-center"
+                    className="text-4xl md:text-5xl font-bold text-orange-900 mb-8 text-center"
                 >
-                    What is <span className="text-emerald-600">Panchakarma?</span>
+                    What is Panchakarma?
                 </motion.h2>
 
                 <PanchakarmaInfo />
@@ -100,7 +100,7 @@ const AboutPage = () => {
 
             {/* -------- SERVICES -------- */}
             <section className="max-w-6xl mx-auto px-4 py-16 bg-green-50">
-                <h2 className="text-3xl md:text-4xl font-bold text-green-800 mb-10 text-center">
+                <h2 className="text-3xl md:text-4xl font-bold text-orange-900 mb-10 text-center">
                     Services Provided
                 </h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-8">
@@ -108,7 +108,7 @@ const AboutPage = () => {
                         <motion.div
                             key={idx}
                             whileHover={{ scale: 1.05, rotate: 1 }}
-                            className="bg-white/80 backdrop-blur-lg rounded-xl p-4 shadow-lg border border-white/30 text-green-800 font-medium text-center flex items-center justify-center"
+                            className="bg-white/80 backdrop-blur-lg rounded-xl p-4 shadow-lg border border-white/30 text-purple-900 text-md font-semibold text-center flex items-center justify-center"
                         >
                             <span className="mr-2 text-lg">
                                 {idx % 2 === 0 ? "🌿" : idx % 3 === 0 ? "💧" : "🍃"}
@@ -130,7 +130,7 @@ const AboutPage = () => {
             {/* -------- BENEFITS -------- */}
             <section className="bg-green-100 py-10">
                 <div className="max-w-6xl mx-auto px-4">
-                    <h2 className="text-3xl md:text-4xl font-bold text-green-800 mb-10 text-center">
+                    <h2 className="text-3xl md:text-4xl font-bold text-orange-900 mb-10 text-center">
                         Key Benefits
                     </h2>
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -148,7 +148,7 @@ const AboutPage = () => {
                                 className="bg-white shadow-lg rounded-xl p-6 text-center"
                             >
                                 <span className="text-5xl mb-4 inline-block">{benefit.icon}</span>
-                                <p className="text-green-700 font-semibold">{benefit.text}</p>
+                                <p className="text-purple-900 text-md font-semibold">{benefit.text}</p>
                             </motion.div>
                         ))}
                     </div>
@@ -157,7 +157,7 @@ const AboutPage = () => {
 
             {/* -------- PANCHAKARMA PROCEDURES -------- */}
             <section className="max-w-6xl mx-auto px-4 py-16">
-                <h2 className="text-3xl md:text-4xl font-bold text-green-800 mb-10 text-center">
+                <h2 className="text-3xl md:text-4xl font-bold text-orange-900 mb-10 text-center">
                     The Five Procedures
                 </h2>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -194,10 +194,10 @@ const AboutPage = () => {
                             className="bg-gradient-to-tr from-green-200 to-emerald-300 rounded-2xl p-6 shadow-lg"
                         >
                             <div className="text-5xl mb-4 text-center">{therapy.icon}</div>
-                            <h3 className="text-xl font-bold text-green-800 mb-2 text-center">
+                            <h3 className="text-xl font-bold text-purple-900 mb-2 text-center">
                                 {therapy.name}
                             </h3>
-                            <p className="text-green-700 text-center">{therapy.desc}</p>
+                            <p className="text-orange-900 font-semibold text-center">{therapy.desc}</p>
                         </motion.div>
                     ))}
                 </div>

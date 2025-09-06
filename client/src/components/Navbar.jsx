@@ -9,6 +9,7 @@ import {
     SheetTrigger,
 } from "@/components/ui/sheet";
 import { Menu, Leaf, User, LogOut, Settings } from 'lucide-react';
+import { Link } from "react-router-dom"; // ✅ Correct import
 
 // Floating particles for background
 const generateParticles = (num) => {
@@ -52,7 +53,6 @@ const Navbar = () => {
 
     const userMenuItems = [
         { icon: User, label: 'Profile', path: '/profile' },
-        { icon: Settings, label: 'Settings', path: '/settings' },
         { icon: LogOut, label: 'Logout', path: '/logout' },
     ];
 
@@ -115,35 +115,39 @@ const Navbar = () => {
                     {/* Navigation Items */}
                     <div className='flex items-center gap-6'>
                         {navItems.map((item) => (
-                            <a key={item.id} href={item.path} className="text-lg font-semibold text-green-800 hover:text-green-600 px-3 py-2 rounded-full transition-all duration-300">
+                            <Link
+                                key={item.id}
+                                to={item.path}
+                                className="text-xl font-semibold bg-gradient-to-r from-green-600 via-yellow-400 to-purple-700 bg-clip-text text-transparent transition-all duration-300"
+                            >
                                 {item.name}
-                            </a>
+                            </Link>
                         ))}
 
                         {/* User Section */}
                         {user ? (
                             <motion.div className="flex items-center gap-4">
-                                <a href="/dashboard">
+                                <Link to="/dashboard">
                                     <Button className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-semibold px-6 py-2.5 rounded-full shadow-lg transition-all duration-300 border-0 hover:cursor-pointer">
                                         Dashboard
                                     </Button>
-                                </a>
+                                </Link>
                                 <div className="w-10 h-10 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full flex items-center justify-center text-white font-semibold cursor-pointer shadow-lg">
                                     <User className="w-5 h-5 hover:cursor-pointer" />
                                 </div>
                             </motion.div>
                         ) : (
                             <div className="flex gap-3">
-                                <a href="/login">
+                                <Link to="/login">
                                     <Button className="bg-green-500 hover:bg-green-600 text-white font-semibold px-5 py-2.5 rounded-full shadow transition-all duration-300 border-0 hover:cursor-pointer">
                                         Login
                                     </Button>
-                                </a>
-                                <a href="/signup">
+                                </Link>
+                                <Link to="/signup">
                                     <Button className="bg-emerald-500 hover:bg-emerald-600 text-white font-semibold px-5 py-2.5 rounded-full shadow transition-all duration-300 border-0 hover:cursor-pointer">
                                         Signup
                                     </Button>
-                                </a>
+                                </Link>
                             </div>
                         )}
                     </div>
@@ -191,39 +195,43 @@ const Navbar = () => {
 
                             <div className='flex flex-col space-y-4 p-4'>
                                 {navItems.map((item) => (
-                                    <a key={item.id} href={item.path} className="text-lg font-semibold text-green-800 hover:text-green-600 block rounded-xl transition-all duration-300">
+                                    <Link
+                                        key={item.id}
+                                        to={item.path}
+                                        className="text-lg font-semibold bg-gradient-to-r from-green-600 via-yellow-400 to-purple-700 bg-clip-text text-transparent rounded-xl transition-all duration-300"
+                                    >
                                         {item.name}
-                                    </a>
+                                    </Link>
                                 ))}
 
                                 {user ? (
                                     <div className="pt-4 border-t border-green-200/50 space-y-2">
-                                        <a href="/dashboard">
+                                        <Link to="/dashboard">
                                             <Button className="w-full bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-semibold py-3 rounded-xl shadow-lg transition-all duration-300 border-0 mb-4 hover:cursor-pointer">
                                                 Dashboard
                                             </Button>
-                                        </a>
+                                        </Link>
                                         {userMenuItems.map((menuItem) => (
-                                            <a key={menuItem.label} href={menuItem.path}>
+                                            <Link key={menuItem.label} to={menuItem.path}>
                                                 <div className="flex items-center gap-3 text-green-700 hover:text-green-600 p-3 rounded-lg hover:bg-green-50/50 transition-colors cursor-pointer">
                                                     <menuItem.icon className="w-5 h-5" />
                                                     <span className="font-medium">{menuItem.label}</span>
                                                 </div>
-                                            </a>
+                                            </Link>
                                         ))}
                                     </div>
                                 ) : (
                                     <div className="flex flex-col gap-3 pt-4 border-t border-green-200/50">
-                                        <a href="/login">
+                                        <Link to="/login">
                                             <Button className="w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-3 rounded-xl shadow-lg transition-all duration-300 border-0">
                                                 Login
                                             </Button>
-                                        </a>
-                                        <a href="/signup">
+                                        </Link>
+                                        <Link to="/signup">
                                             <Button className="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-semibold py-3 rounded-xl shadow-lg transition-all duration-300 border-0">
                                                 Signup
                                             </Button>
-                                        </a>
+                                        </Link>
                                     </div>
                                 )}
                             </div>

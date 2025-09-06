@@ -62,10 +62,10 @@ const DashboardPage = () => {
                 transition={{ duration: 1 }}
                 className="text-center mb-12"
             >
-                <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-green-700 via-emerald-600 to-teal-500 bg-clip-text text-transparent">
+                <h1 className="text-4xl sm:text-5xl font-extrabold bg-gradient-to-r from-green-600 via-yellow-400 to-purple-700 bg-clip-text text-transparent">
                     Welcome Back, Rejuvenator! 🌿
                 </h1>
-                <p className="mt-4 text-lg sm:text-xl md:text-2xl text-green-800/80">
+                <p className="mt-4 text-lg sm:text-xl md:text-2xl text-purple-900 font-semibold">
                     Your healing journey is beautifully unfolding ✨
                 </p>
             </motion.div>
@@ -77,13 +77,13 @@ const DashboardPage = () => {
                 transition={{ duration: 1 }}
                 className="mt-12 bg-gradient-to-r from-emerald-100 via-green-50 to-teal-100 rounded-3xl shadow-xl p-6 text-center mb-6"
             >
-                <h2 className="text-2xl font-bold text-green-800 mb-2">
+                <h2 className="text-2xl font-bold text-orange-900 mb-2">
                     🌸 Next Session Reminder
                 </h2>
-                <p className="text-green-700 text-lg">
-                    Your next <span className="font-semibold">Nasya Therapy</span> is
+                <p className="text-purple-900 font-semibold text-lg">
+                    Your next <span className="font-bold">Nasya Therapy</span> is
                     scheduled on{" "}
-                    <span className="font-bold text-green-900">5th Sept, 10:00 AM</span>.
+                    <span className="font-bold text-purple-900">5th Sept, 10:00 AM</span>.
                 </p>
             </motion.div>
 
@@ -97,7 +97,7 @@ const DashboardPage = () => {
                     transition={{ duration: 1 }}
                     className="lg:col-span-2 bg-white/80 backdrop-blur-lg rounded-3xl p-6 shadow-2xl border border-white/30"
                 >
-                    <h2 className="text-2xl font-bold text-green-800 mb-6 text-center">
+                    <h2 className="text-2xl font-bold text-orange-800 mb-6 text-center">
                         Therapy Sessions
                     </h2>
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
@@ -110,10 +110,10 @@ const DashboardPage = () => {
                                 whileHover={{ scale: 1.05 }}
                                 className="bg-gradient-to-br from-green-50 to-emerald-100 rounded-2xl p-4 shadow-md border border-green-100 hover:shadow-xl flex flex-col items-center justify-center"
                             >
-                                <h3 className="text-xl font-semibold text-green-700 mb-2">
+                                <h3 className="text-xl font-semibold text-orange-900 mb-2">
                                     {therapy.name}
                                 </h3>
-                                <p className="text-green-800 text-lg font-bold">
+                                <p className="text-purple-900 text-lg font-bold">
                                     {therapy.sessions} Sessions
                                 </p>
                             </motion.div>
@@ -142,7 +142,7 @@ const DashboardPage = () => {
                     transition={{ duration: 1 }}
                     className="bg-white/80 backdrop-blur-lg rounded-3xl p-6 shadow-2xl border border-white/30 flex flex-col items-center justify-center"
                 >
-                    <h2 className="text-2xl font-bold text-green-800 mb-6 text-center">
+                    <h2 className="text-2xl font-bold text-orange-900 mb-6 text-center">
                         Your Wellness Progress
                     </h2>
                     <div className="w-64 sm:w-72 md:w-80">
@@ -157,7 +157,7 @@ const DashboardPage = () => {
                             }}
                         />
                     </div>
-                    <p className="mt-4 text-green-700 text-lg font-medium text-center">
+                    <p className="mt-4 text-purple-900 text-lg font-medium text-center">
                         You have completed{" "}
                         <span className="font-bold text-green-800">
                             {progressData.datasets[0].data[0]}%

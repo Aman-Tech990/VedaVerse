@@ -27,10 +27,10 @@ const SchedulePage = () => {
                 transition={{ duration: 1 }}
                 className="text-center mb-16"
             >
-                <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-green-700 via-emerald-600 to-teal-500 bg-clip-text text-transparent">
+                <h1 className="text-4xl sm:text-5xl font-extrabold bg-gradient-to-r from-green-600 via-yellow-400 to-purple-700 bg-clip-text text-transparent">
                     Unlock Your Body&apos;s True Potential 🌿
                 </h1>
-                <p className="text-green-800 text-lg sm:text-xl md:text-2xl mt-4">
+                <p className="text-purple-900 font-semibold text-lg sm:text-xl mt-4">
                     Pick a date, choose your therapy, and let wellness flow effortlessly.
                 </p>
             </motion.div>
@@ -49,10 +49,10 @@ const SchedulePage = () => {
                         whileTap={{ scale: 0.97 }}
                         className="bg-white/80 backdrop-blur-lg p-6 rounded-3xl shadow-xl border border-white/30 flex flex-col items-center text-center cursor-pointer"
                     >
-                        <div className="text-4xl mb-3 text-green-700">{item.icon}</div>
-                        <h3 className="font-bold text-green-900 mb-2">{item.label}</h3>
+                        <div className="text-4xl mb-3 text-orange-900">{item.icon}</div>
+                        <h3 className="font-bold text-orange-900 mb-2">{item.label}</h3>
                         <select
-                            className="p-2 rounded-xl border border-green-200 w-full text-green-800 text-center font-medium focus:ring-2 focus:ring-green-400 focus:outline-none"
+                            className="p-2 rounded-xl border border-green-200 w-full text-purple-900 text-center font-medium focus:ring-2 focus:ring-purple-900 focus:outline-none"
                             value={item.value}
                             onChange={(e) => item.setValue(e.target.value)}
                         >
@@ -84,7 +84,7 @@ const SchedulePage = () => {
                             className={`p-5 rounded-2xl shadow-lg text-center cursor-pointer font-semibold transition-all duration-300 
                 ${selectedDate === date
                                     ? "bg-gradient-to-r from-green-500 to-emerald-600 text-white shadow-2xl ring-2 ring-green-400"
-                                    : "bg-white/80 backdrop-blur-lg text-green-800 hover:shadow-xl"
+                                    : "bg-white/80 backdrop-blur-lg text-purple-900 hover:shadow-xl"
                                 }`}
                         >
                             {date}
@@ -102,8 +102,8 @@ const SchedulePage = () => {
                     transition={{ duration: 0.8 }}
                     className="max-w-3xl mx-auto mb-12 bg-white/90 backdrop-blur-lg rounded-3xl p-6 shadow-xl border border-white/30 text-center"
                 >
-                    <h2 className="text-2xl font-bold text-green-800 mb-4">Your Selection</h2>
-                    <p className="text-green-700 text-lg">
+                    <h2 className="text-2xl font-bold text-orange-900 mb-4">Your Selection</h2>
+                    <p className="text-purple-900 text-lg">
                         {selectedDate && <span className="font-semibold">📅 {selectedDate} </span>}
                         {selectedTime && <span className="font-semibold">⏰ {selectedTime} </span>}
                         {selectedTherapy && <span className="font-semibold">🌸 {selectedTherapy} </span>}

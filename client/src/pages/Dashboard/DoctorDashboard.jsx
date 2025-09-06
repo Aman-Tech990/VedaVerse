@@ -49,14 +49,14 @@ const DoctorDashboard = () => {
                 initial={{ y: -50, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.8 }}
-                className="text-4xl md:text-5xl font-extrabold text-center bg-gradient-to-r from-green-700 via-emerald-600 to-orange-500 bg-clip-text text-transparent"
+                className="text-4xl md:text-5xl font-extrabold text-center text-purple-950 bg-clip-text"
             >
                 Doctor Dashboard
             </motion.h1>
 
             {/* Tabs */}
             <Tabs defaultValue="patients" className="mt-10">
-                <TabsList className="grid grid-cols-3 max-w-xl mx-auto rounded-2xl bg-white/70 backdrop-blur-lg shadow-lg">
+                <TabsList className="grid grid-cols-3 max-w-xl mx-auto rounded-2xl bg-white/70 backdrop-blur-lg shadow-lg text-purple-900">
                     <TabsTrigger value="patients">Patients</TabsTrigger>
                     <TabsTrigger value="availability">Availability</TabsTrigger>
                     <TabsTrigger value="notifications">Notifications</TabsTrigger>
@@ -76,21 +76,21 @@ const DoctorDashboard = () => {
                             >
                                 <Card className="bg-white/80 backdrop-blur-md shadow-xl border-none rounded-2xl hover:scale-105 transition-transform duration-300">
                                     <CardHeader>
-                                        <CardTitle className="flex items-center gap-2 text-green-700">
-                                            <User className="w-6 h-6 text-green-500" /> {p.name}
+                                        <CardTitle className="flex items-center gap-2 text-orange-900">
+                                            <User className="w-6 h-6 text-orange-900" /> {p.name}
                                         </CardTitle>
                                     </CardHeader>
-                                    <CardContent className="space-y-2 text-sm text-green-900">
+                                    <CardContent className="space-y-2 text-md font-semibold text-purple-900">
                                         <p className="flex items-center gap-2"><Mail className="w-4 h-4" /> {p.email}</p>
                                         <p className="flex items-center gap-2"><Phone className="w-4 h-4" /> {p.phone}</p>
                                         <p className="flex items-center gap-2"><MapPin className="w-4 h-4" /> {p.address}</p>
                                         <div className="mt-2 w-full bg-green-100 rounded-full h-3">
                                             <div
-                                                className="bg-green-500 h-3 rounded-full"
+                                                className="bg-yellow-400 h-3 rounded-full"
                                                 style={{ width: `${p.progress}%` }}
                                             ></div>
                                         </div>
-                                        <p className="text-xs text-green-700">Progress: {p.progress}%</p>
+                                        <p className="text-sm text-purple-900">Progress: {p.progress}%</p>
                                     </CardContent>
                                 </Card>
                             </motion.div>
@@ -103,7 +103,7 @@ const DoctorDashboard = () => {
                             animate={{ scale: 1, opacity: 1 }}
                             className="mt-12 p-6 bg-white/80 backdrop-blur-lg rounded-3xl shadow-2xl max-w-2xl mx-auto"
                         >
-                            <h2 className="text-2xl font-bold text-green-800 mb-4">
+                            <h2 className="text-2xl font-bold text-orange-900 mb-4">
                                 {selectedPatient.name}'s Progress
                             </h2>
                             <Pie
@@ -112,7 +112,7 @@ const DoctorDashboard = () => {
                                     datasets: [
                                         {
                                             data: [selectedPatient.progress, 100 - selectedPatient.progress],
-                                            backgroundColor: ["#10B981", "#D1FAE5"],
+                                            backgroundColor: ["orange", "purple"],
                                         },
                                     ],
                                 }}
@@ -125,32 +125,32 @@ const DoctorDashboard = () => {
                 {/* Availability */}
                 <TabsContent value="availability" className="mt-10">
                     <Card className="bg-white/80 backdrop-blur-lg rounded-3xl shadow-2xl p-8 max-w-3xl mx-auto">
-                        <h2 className="text-2xl font-bold text-green-800 mb-6 text-center">Set Your Availability</h2>
+                        <h2 className="text-2xl font-bold text-orange-900 mb-6 text-center">Set Your Availability</h2>
                         <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-6">
                             {["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"].map((day, idx) => (
                                 <motion.div
                                     key={idx}
                                     whileHover={{ scale: 1.05 }}
-                                    className="bg-green-100 text-green-800 text-center p-3 rounded-xl shadow cursor-pointer hover:bg-green-200"
+                                    className="bg-green-100 text-purple-900 text-center p-3 rounded-xl shadow cursor-pointer hover:bg-green-200 font-semibold"
                                 >
                                     <CalendarDays className="w-5 h-5 mx-auto mb-1" />
                                     {day}
                                 </motion.div>
                             ))}
                         </div>
-                        <Label className="text-green-700">Select Time Slots</Label>
+                        <Label className="text-orange-900 text-lg">Select Time Slots</Label>
                         <div className="flex flex-wrap gap-3 mt-2">
                             {["9-11 AM", "11-1 PM", "2-4 PM", "4-6 PM", "6-8 PM"].map((slot, i) => (
                                 <Button
                                     key={i}
                                     variant="outline"
-                                    className="rounded-full border-green-400 text-green-700 hover:bg-green-200"
+                                    className="rounded-full border-purple-950 text-purple-900 hover:bg-green-200"
                                 >
                                     {slot}
                                 </Button>
                             ))}
                         </div>
-                        <Button className="mt-6 w-full bg-gradient-to-r from-green-600 to-emerald-500 text-white rounded-xl hover:scale-105 transition-transform">
+                        <Button className="mt-6 w-full bg-gradient-to-r from-green-600 to-emerald-500 text-white rounded-xl hover:scale-105 transition-transform cursor-pointer">
                             Save Availability
                         </Button>
                     </Card>
@@ -159,18 +159,18 @@ const DoctorDashboard = () => {
                 {/* Notifications */}
                 <TabsContent value="notifications" className="mt-10">
                     <Card className="bg-white/80 backdrop-blur-lg rounded-3xl shadow-2xl p-8 max-w-2xl mx-auto">
-                        <h2 className="text-2xl font-bold text-green-800 mb-6 text-center">Send Notifications</h2>
-                        <Label className="text-green-700">Message</Label>
+                        <h2 className="text-2xl font-bold text-orange-900 mb-6 text-center">Send Notifications</h2>
+                        <Label className="text-purple-950 text-lg">Message</Label>
                         <Input placeholder="Enter your notification message..." className="mb-4" />
                         <div className="grid grid-cols-2 gap-4 mb-6">
-                            <Button className="bg-green-500 text-white hover:bg-green-600 flex items-center gap-2">
+                            <Button className="bg-green-500 text-white hover:bg-green-600 flex items-center gap-2 cursor-pointer">
                                 <Bell className="w-5 h-5" /> Pre-Therapy
                             </Button>
-                            <Button className="bg-orange-500 text-white hover:bg-orange-600 flex items-center gap-2">
+                            <Button className="bg-orange-500 text-white hover:bg-orange-600 flex items-center gap-2 cursor-pointer">
                                 <Bell className="w-5 h-5" /> Post-Therapy
                             </Button>
                         </div>
-                        <Button className="w-full bg-gradient-to-r from-green-600 to-emerald-500 text-white rounded-xl hover:scale-105 transition-transform">
+                        <Button className="w-full bg-gradient-to-r from-green-600 to-emerald-500 text-white rounded-xl hover:scale-105 transition-transform cursor-pointer">
                             Send Notification
                         </Button>
                     </Card>

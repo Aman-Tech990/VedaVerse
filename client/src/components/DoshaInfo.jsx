@@ -36,7 +36,7 @@ const DoshaInfo = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7 }}
-                className="text-3xl md:text-4xl font-bold text-green-800 mb-10 text-center"
+                className="text-3xl md:text-4xl font-bold text-orange-900 mb-10 text-center"
             >
                 Balance Your Doshas
             </motion.h2>
@@ -51,10 +51,10 @@ const DoshaInfo = () => {
                         className={`bg-gradient-to-br ${dosha.color} rounded-2xl p-6 shadow-lg text-center hover:scale-105 transition-transform duration-300`}
                     >
                         <div className="flex justify-center mb-4">{dosha.icon}</div>
-                        <h3 className="text-2xl font-bold text-green-800 mb-3">{dosha.name}</h3>
-                        <p className="text-green-700 mb-2"><span className="font-semibold">Qualities:</span> {dosha.qualities}</p>
-                        <p className="text-green-700 mb-2"><span className="font-semibold">Balanced:</span> {dosha.balanced}</p>
-                        <p className="text-green-700"><span className="font-semibold">Imbalanced:</span> {dosha.imbalanced}</p>
+                        <h3 className="text-2xl font-bold text-orange-900 mb-3">{dosha.name}</h3>
+                        <p className="text-purple-900 font-semibold mb-2"><span className="font-semibold">Qualities:</span> {dosha.qualities}</p>
+                        <p className="text-purple-900 font-semibold  mb-2"><span className="font-semibold">Balanced:</span> {dosha.balanced}</p>
+                        <p className="text-purple-900 font-semibold "><span className="font-semibold">Imbalanced:</span> {dosha.imbalanced}</p>
                     </motion.div>
                 ))}
             </div>

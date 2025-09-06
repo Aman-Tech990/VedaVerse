@@ -67,7 +67,7 @@ const LoginPage = () => {
 
             {/* Title */}
             <motion.h1
-                className="relative z-10 mb-10 text-5xl font-extrabold bg-gradient-to-r from-green-600 via-emerald-500 to-orange-500 bg-clip-text text-transparent"
+                className="relative z-10 mb-10 text-5xl font-extrabold bg-gradient-to-r from-green-600 via-yellow-400 to-purple-700 bg-clip-text text-transparent"
                 initial={{ opacity: 0, y: -40, scale: 0.9 }}
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 transition={{ duration: 1, type: "spring" }}
@@ -86,13 +86,13 @@ const LoginPage = () => {
                     <TabsList className="grid grid-cols-2 bg-white/70 backdrop-blur-lg rounded-2xl shadow-md w-full">
                         <TabsTrigger
                             value="register"
-                            className="data-[state=active]:bg-green-500 data-[state=active]:text-white rounded-xl"
+                            className="data-[state=active]:bg-purple-500 data-[state=active]:text-white rounded-xl"
                         >
                             Register
                         </TabsTrigger>
                         <TabsTrigger
                             value="login"
-                            className="data-[state=active]:bg-green-500 data-[state=active]:text-white rounded-xl"
+                            className="data-[state=active]:bg-purple-500 data-[state=active]:text-white rounded-xl"
                         >
                             Login
                         </TabsTrigger>
@@ -107,17 +107,17 @@ const LoginPage = () => {
                         >
                             <Card className="backdrop-blur-lg bg-white/70 shadow-xl border-none rounded-2xl">
                                 <CardHeader>
-                                    <CardTitle className="text-green-700">
+                                    <CardTitle className="text-orange-900 font-semibold text-lg">
                                         Create Account
                                     </CardTitle>
-                                    <CardDescription>
+                                    <CardDescription className="text-purple-950 font-semibold">
                                         Begin your Panchakarma healing journey
                                     </CardDescription>
                                 </CardHeader>
                                 <CardContent className="space-y-4">
                                     {/* Name */}
                                     <motion.div
-                                        className="space-y-2"
+                                        className="space-y-2 text-orange-900"
                                         initial={{ opacity: 0, x: -20 }}
                                         animate={{ opacity: 1, x: 0 }}
                                         transition={{ duration: 0.5, delay: 0.7 }}
@@ -128,7 +128,7 @@ const LoginPage = () => {
 
                                     {/* Email */}
                                     <motion.div
-                                        className="space-y-2"
+                                        className="space-y-2 text-orange-900"
                                         initial={{ opacity: 0, x: -20 }}
                                         animate={{ opacity: 1, x: 0 }}
                                         transition={{ duration: 0.5, delay: 0.9 }}
@@ -139,7 +139,7 @@ const LoginPage = () => {
 
                                     {/* Password */}
                                     <motion.div
-                                        className="space-y-2"
+                                        className="space-y-2 text-orange-900"
                                         initial={{ opacity: 0, x: -20 }}
                                         animate={{ opacity: 1, x: 0 }}
                                         transition={{ duration: 0.5, delay: 1.1 }}
@@ -242,17 +242,17 @@ const LoginPage = () => {
                         >
                             <Card className="backdrop-blur-lg bg-white/70 shadow-xl border-none rounded-2xl">
                                 <CardHeader>
-                                    <CardTitle className="text-green-700">
+                                    <CardTitle className="text-orange-900 font-bold">
                                         Welcome Back
                                     </CardTitle>
-                                    <CardDescription>
+                                    <CardDescription className="text-purple-900 font-semibold">
                                         Enter your details to continue your wellness journey
                                     </CardDescription>
                                 </CardHeader>
                                 <CardContent className="space-y-4">
                                     {/* Email */}
                                     <motion.div
-                                        className="space-y-2"
+                                        className="space-y-2 text-orange-900"
                                         initial={{ opacity: 0, x: 20 }}
                                         animate={{ opacity: 1, x: 0 }}
                                         transition={{ duration: 0.5, delay: 0.7 }}
@@ -263,7 +263,7 @@ const LoginPage = () => {
 
                                     {/* Password */}
                                     <motion.div
-                                        className="space-y-2"
+                                        className="space-y-2 text-orange-900"
                                         initial={{ opacity: 0, x: 20 }}
                                         animate={{ opacity: 1, x: 0 }}
                                         transition={{ duration: 0.5, delay: 0.9 }}

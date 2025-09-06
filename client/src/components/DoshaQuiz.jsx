@@ -60,7 +60,7 @@ const DoshaQuiz = () => {
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1 }}
-                className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-green-800 text-center mb-12"
+                className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-orange-900 text-center mb-12"
             >
                 Discover Your Dosha
             </motion.h2>
@@ -72,7 +72,7 @@ const DoshaQuiz = () => {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6 }}
-                            className="text-green-800 font-semibold text-lg mb-6 text-center"
+                            className="text-purple-950 font-semibold text-xl mb-6 text-center"
                         >
                             {questions[currentQuestion].question}
                         </motion.p>
@@ -100,7 +100,7 @@ const DoshaQuiz = () => {
                         <h3 className="text-2xl sm:text-3xl font-bold text-green-800 mb-4">
                             Your Dosha:
                         </h3>
-                        <p className="text-xl sm:text-2xl text-green-700 mb-6">{result}</p>
+                        <p className="text-xl font-semibold sm:text-2xl text-orange-900 mb-6">{result}</p>
                         <button
                             onClick={resetQuiz}
                             className="px-6 py-3 rounded-xl bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold shadow-lg hover:from-green-600 hover:to-emerald-700 transition-all duration-300"

@@ -28,7 +28,7 @@ const PanchakarmaTimeline = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7 }}
-                className="text-4xl sm:text-5xl font-extrabold text-green-800 text-center mb-6"
+                className="text-4xl sm:text-5xl font-extrabold text-orange-900 text-center mb-6"
             >
                 Your Panchakarma Journey
             </motion.h2>
@@ -36,7 +36,7 @@ const PanchakarmaTimeline = () => {
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ delay: 0.3, duration: 0.7 }}
-                className="text-center text-green-700 max-w-3xl mx-auto mb-12 text-lg"
+                className="text-center text-purple-950 font-semibold max-w-3xl mx-auto mb-12 text-lg"
             >
                 Explore the three key stages of Panchakarma to rejuvenate your body, mind, and energy.
             </motion.p>
@@ -70,8 +70,8 @@ const PanchakarmaTimeline = () => {
                             <div className="mb-4 flex justify-center md:justify-start">
                                 {step.icon}
                             </div>
-                            <h3 className="text-2xl font-bold text-green-800 mb-3">{step.stage}</h3>
-                            <p className="text-green-700">{step.description}</p>
+                            <h3 className="text-2xl font-bold text-purple-900 mb-3">{step.stage}</h3>
+                            <p className="text-purple-900 font-semibold">{step.description}</p>
                         </div>
                     </motion.div>
                 ))}

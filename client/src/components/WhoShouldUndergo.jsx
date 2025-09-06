@@ -48,16 +48,15 @@ const WhoShouldUndergo = () => {
             <div className="relative max-w-7xl mx-auto px-6">
                 {/* Heading */}
                 <motion.h2
-                    className="text-4xl md:text-5xl font-bold text-center text-green-900 mb-6"
+                    className="text-4xl md:text-5xl font-bold text-center text-orange-900 mb-6"
                     initial={{ y: -40, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
                     transition={{ duration: 0.8 }}
                 >
-                    Who Should Undergo{" "}
-                    <span className="text-emerald-700 drop-shadow-md">Panchakarma?</span>
+                    Who Should Undergo Panchakarma?
                 </motion.h2>
                 <motion.p
-                    className="text-lg text-center text-green-700 max-w-2xl mx-auto mb-14"
+                    className="text-lg text-center text-purple-900 font-semibold max-w-2xl mx-auto mb-14"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     transition={{ delay: 0.3, duration: 0.8 }}
@@ -91,7 +90,7 @@ const WhoShouldUndergo = () => {
                             whileHover={{ scale: 1.05 }}
                         >
                             {/* Glow ring on hover */}
-                            <div className="absolute inset-0 rounded-2xl border-2 border-transparent group-hover:border-emerald-400 transition duration-300" />
+                            <div className="absolute inset-0 rounded-2xl border-2 border-transparent group-hover:border-emerald-600 transition duration-300" />
 
                             {/* Icon with hover float */}
                             <motion.div
@@ -102,12 +101,12 @@ const WhoShouldUndergo = () => {
                             </motion.div>
 
                             {/* Title */}
-                            <h3 className="text-xl font-semibold text-green-900 text-center mb-3">
+                            <h3 className="text-xl font-semibold text-orange-900 text-center mb-3">
                                 {item.title}
                             </h3>
 
                             {/* Description */}
-                            <p className="text-green-700 text-center leading-relaxed text-sm md:text-base">
+                            <p className="text-purple-900 font-semibold text-center leading-relaxed text-sm md:text-base">
                                 {item.desc}
                             </p>
                         </motion.div>
