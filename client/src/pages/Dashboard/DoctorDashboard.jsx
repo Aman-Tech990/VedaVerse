@@ -370,8 +370,8 @@ const DoctorDashboard = () => {
                             {/* Health Metrics */}
                             <Card className="bg-white/80 backdrop-blur-lg rounded-3xl shadow-2xl border-none p-6">
                                 <CardHeader>
-                                    <CardTitle className="text-xl font-bold text-green-800 flex items-center gap-2">
-                                        <Activity className="w-6 h-6 text-green-600" />
+                                    <CardTitle className="text-xl font-bold text-orange-900 flex items-center gap-2">
+                                        <Activity className="w-6 h-6 text-orange-900" />
                                         Health Metrics
                                     </CardTitle>
                                 </CardHeader>
@@ -648,13 +648,13 @@ const DoctorDashboard = () => {
                                             <CardContent className="space-y-3 text-sm text-purple-900">
                                                 <div className="flex items-center gap-2">
                                                     <Mail className="w-4 h-4 text-purple-900" />
-                                                    <span className="truncate">{patient.email}</span>
+                                                    <span className="truncate font-semibold">{patient.email}</span>
                                                 </div>
-                                                <div className="flex items-center gap-2">
+                                                <div className="flex items-center gap-2 font-semibold">
                                                     <Phone className="w-4 h-4 text-purple-900" />
                                                     <span>{patient.phone}</span>
                                                 </div>
-                                                <div className="flex items-center gap-2">
+                                                <div className="flex items-center gap-2 font-semibold">
                                                     <MapPin className="w-4 h-4 text-purple-900" />
                                                     <span>{patient.address}</span>
                                                 </div>
