@@ -154,7 +154,7 @@ const DoctorDashboard = () => {
                             Save Availability
                         </Button>
                     </Card>
-                </TabsContent>
+                </TabsContent> 
 
                 {/* Notifications */}
                 <TabsContent value="notifications" className="mt-10">

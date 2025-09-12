@@ -4,6 +4,7 @@ import { Link } from "react-router";
 import { ChevronLeft, ChevronRight, Play, Pause, Droplets, Leaf, Heart, Brain, Shield } from "lucide-react";
 import DoshaQuiz from "@/components/Doshaquiz";
 import Footer from "@/components/Footer";
+import { MapPin } from "lucide-react";
 
 const panchakarmaTherapy = [
     {
@@ -234,7 +235,7 @@ const HeroSection = () => {
                     className="mb-4 md:mb-6"
                 >
                     <motion.h1
-                        className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold bg-gradient-to-r from-green-600 via-yellow-400 to-purple-700 bg-clip-text text-transparent mt-5"
+                        className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold bg-green-600 bg-clip-text text-transparent mt-5"
                         animate={{
                             backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
                         }}
@@ -254,12 +255,26 @@ const HeroSection = () => {
                     Discover the ancient art of Panchakarma and rejuvenate your mind and body with modern wellness experiences.
                 </motion.p>
 
+                {/* Get Nearby Centers Button */}
+                <Link to="/center">
+                    <motion.button
+                        whileHover={{ scale: 1.05, boxShadow: "0 15px 30px rgba(59,130,246,0.3)" }}
+                        whileTap={{ scale: 0.95 }}
+                        className="mt-6 px-6 py-3 md:px-8 md:py-4 rounded-2xl bg-red-500 text-white font-semibold shadow-lg text-sm md:text-base lg:text-lg transition-all duration-300 cursor-pointer"
+                    >
+                        <div className="flex items-center gap-2">
+                            <MapPin className="inline-block w-5 h-5" />
+                            Get Nearby Centers
+                        </div>
+                    </motion.button>
+                </Link>
+
                 {/* CTA Buttons */}
                 <motion.div
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ delay: 0.6, duration: 1 }}
-                    className="mt-6 sm:mt-8 flex flex-col sm:flex-row gap-4 sm:gap-6"
+                    className="mt-6 sm:mt-8 flex flex-row gap-4"
                 >
                     <Link to="schedule">
                         <motion.button
@@ -268,9 +283,9 @@ const HeroSection = () => {
                                 boxShadow: "0 15px 30px rgba(34, 197, 94, 0.3)",
                             }}
                             whileTap={{ scale: 0.95 }}
-                            className="group px-6 py-3 md:px-8 md:py-4 rounded-2xl bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-black font-semibold shadow-lg text-sm md:text-base lg:text-lg transition-all duration-300 hover:cursor-pointer"
+                            className="group w-full px-6 py-3 md:px-8 md:py-4 rounded-2xl bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-semibold shadow-lg text-sm md:text-base lg:text-lg transition-all duration-300"
                         >
-                            <span className="flex items-center justify-center gap-2 text-white">
+                            <span className="flex items-center justify-center gap-2">
                                 Schedule my Therapy
                                 <motion.div
                                     animate={{ x: [0, 5, 0] }}
@@ -290,12 +305,13 @@ const HeroSection = () => {
                                 boxShadow: "0 15px 30px rgba(0, 0, 0, 0.1)",
                             }}
                             whileTap={{ scale: 0.95 }}
-                            className="px-6 py-3 md:px-8 md:py-4 rounded-2xl bg-white/80 backdrop-blur-sm hover:bg-white/90 text-green-700 font-semibold shadow-lg text-sm md:text-base lg:text-lg border border-green-200 transition-all duration-300 hover:cursor-pointer"
+                            className="w-full px-6 py-3 md:px-8 md:py-4 rounded-2xl bg-white/80 backdrop-blur-sm hover:bg-white/90 text-green-700 font-semibold shadow-lg text-sm md:text-base lg:text-lg border border-green-200 transition-all duration-300"
                         >
                             Learn More
                         </motion.button>
                     </Link>
                 </motion.div>
+
 
                 {/* Enhanced Compact Panchakarma Section */}
                 <motion.div

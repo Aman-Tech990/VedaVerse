@@ -9,7 +9,7 @@ import {
     SheetTrigger,
 } from "@/components/ui/sheet";
 import { Menu, Leaf, User, LogOut, Settings } from 'lucide-react';
-import { Link } from "react-router-dom"; // ✅ Correct import
+import { Link } from "react-router-dom";
 
 // Floating particles for background
 const generateParticles = (num) => {
@@ -118,11 +118,12 @@ const Navbar = () => {
                             <Link
                                 key={item.id}
                                 to={item.path}
-                                className="text-xl font-semibold bg-gradient-to-r from-green-600 via-yellow-400 to-purple-700 bg-clip-text text-transparent transition-all duration-300"
+                                className="text-xl font-semibold text-purple-950 hover:scale-105 transition-all duration-300"
                             >
                                 {item.name}
                             </Link>
                         ))}
+
 
                         {/* User Section */}
                         {user ? (

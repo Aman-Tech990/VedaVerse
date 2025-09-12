@@ -201,26 +201,48 @@ const LoginPage = () => {
                                                 </Label>
                                             </motion.div>
 
-                                            {/* Admin */}
-                                            <motion.div
-                                                whileHover={{ scale: 1.05 }}
-                                                whileTap={{ scale: 0.95 }}
-                                                className="flex items-center space-x-2 bg-green-100 rounded-lg p-3 shadow-sm cursor-pointer col-span-2"
-                                            >
-                                                <RadioGroupItem value="admin" id="admin" />
-                                                <Label
-                                                    htmlFor="admin"
-                                                    className="flex items-center gap-2 font-medium"
+                                            <div className="flex item gap-4">
+                                                {/* Clinic Manager */}
+                                                <motion.div
+                                                    whileHover={{ scale: 1.05 }}
+                                                    whileTap={{ scale: 0.95 }}
+                                                    className="flex items-center space-x-2 bg-green-100 rounded-lg p-3 shadow-sm cursor-pointer col-span-2"
                                                 >
-                                                    <motion.div
-                                                        animate={{ scale: [1, 1.2, 1] }}
-                                                        transition={{ repeat: Infinity, duration: 2.5 }}
+                                                    <RadioGroupItem value="clinicManager" id="clinicManager" />
+                                                    <Label
+                                                        htmlFor="admin"
+                                                        className="flex items-center gap-2 font-medium"
                                                     >
-                                                        <Settings className="w-5 h-5 text-blue-500" />
-                                                    </motion.div>
-                                                    Admin
-                                                </Label>
-                                            </motion.div>
+                                                        <motion.div
+                                                            animate={{ scale: [1, 1.2, 1] }}
+                                                            transition={{ repeat: Infinity, duration: 2.5 }}
+                                                        >
+                                                            <Settings className="w-5 h-5 text-blue-500" />
+                                                        </motion.div>
+                                                        Clinic Manager
+                                                    </Label>
+                                                </motion.div>
+                                                {/* Admin */}
+                                                <motion.div
+                                                    whileHover={{ scale: 1.05 }}
+                                                    whileTap={{ scale: 0.95 }}
+                                                    className="flex items-center space-x-2 bg-green-100 rounded-lg p-3 shadow-sm cursor-pointer col-span-2"
+                                                >
+                                                    <RadioGroupItem value="admin" id="admin" />
+                                                    <Label
+                                                        htmlFor="admin"
+                                                        className="flex items-center gap-2 font-medium"
+                                                    >
+                                                        <motion.div
+                                                            animate={{ scale: [1, 1.2, 1] }}
+                                                            transition={{ repeat: Infinity, duration: 2.5 }}
+                                                        >
+                                                            <Settings className="w-5 h-5 text-blue-500" />
+                                                        </motion.div>
+                                                        Admin
+                                                    </Label>
+                                                </motion.div>
+                                            </div>
                                         </RadioGroup>
                                     </div>
                                 </CardContent>
@@ -325,26 +347,50 @@ const LoginPage = () => {
                                                 </Label>
                                             </motion.div>
 
-                                            {/* Admin */}
-                                            <motion.div
-                                                whileHover={{ scale: 1.05 }}
-                                                whileTap={{ scale: 0.95 }}
-                                                className="flex items-center space-x-2 bg-green-100 rounded-lg p-3 shadow-sm cursor-pointer col-span-2"
-                                            >
-                                                <RadioGroupItem value="admin" id="admin" />
-                                                <Label
-                                                    htmlFor="admin"
-                                                    className="flex items-center gap-2 font-medium"
+                                            <div className="flex flex-row items-center gap-4">
+                                                {/* ClinicManager */}
+                                                <motion.div
+                                                    whileHover={{ scale: 1.05 }}
+                                                    whileTap={{ scale: 0.95 }}
+                                                    className="flex items-center space-x-2 bg-green-100 rounded-lg p-3 shadow-sm cursor-pointer col-span-2 w-full"
                                                 >
-                                                    <motion.div
-                                                        animate={{ scale: [1, 1.2, 1] }}
-                                                        transition={{ repeat: Infinity, duration: 2.5 }}
+                                                    <RadioGroupItem value="admin" id="admin" />
+                                                    <Label
+                                                        htmlFor="admin"
+                                                        className="flex items-center gap-2 font-medium"
                                                     >
-                                                        <Settings className="w-5 h-5 text-blue-500" />
-                                                    </motion.div>
-                                                    Admin
-                                                </Label>
-                                            </motion.div>
+                                                        <motion.div
+                                                            animate={{ scale: [1, 1.2, 1] }}
+                                                            transition={{ repeat: Infinity, duration: 2.5 }}
+                                                        >
+                                                            <Settings className="w-5 h-5 text-blue-500" />
+                                                        </motion.div>
+                                                        Clinic Manager
+                                                    </Label>
+                                                </motion.div>
+                                                {/* Admin */}
+                                                <motion.div
+                                                    whileHover={{ scale: 1.05 }}
+                                                    whileTap={{ scale: 0.95 }}
+                                                    className="flex items-center space-x-2 bg-green-100 rounded-lg p-3 shadow-sm cursor-pointer col-span-2 w-full"
+                                                >
+                                                    <RadioGroupItem value="admin" id="admin" />
+                                                    <Label
+                                                        htmlFor="admin"
+                                                        className="flex items-center gap-2 font-medium"
+                                                    >
+                                                        <motion.div
+                                                            animate={{ scale: [1, 1.2, 1] }}
+                                                            transition={{ repeat: Infinity, duration: 2.5 }}
+                                                        >
+                                                            <Settings className="w-5 h-5 text-blue-500" />
+                                                        </motion.div>
+                                                        Admin
+                                                    </Label>
+                                                </motion.div>
+                                            </div>
+
+
                                         </RadioGroup>
                                     </div>
                                 </CardContent>

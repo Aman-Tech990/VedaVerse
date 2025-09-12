@@ -27,8 +27,8 @@ const SchedulePage = () => {
                 transition={{ duration: 1 }}
                 className="text-center mb-16"
             >
-                <h1 className="text-4xl sm:text-5xl font-extrabold bg-gradient-to-r from-green-600 via-yellow-400 to-purple-700 bg-clip-text text-transparent">
-                    Unlock Your Body&apos;s True Potential 🌿
+                <h1 className="text-4xl sm:text-5xl font-extrabold bg-orange-900 bg-clip-text text-transparent p-4">
+                    Unlock Your Body&apos;s True Potential
                 </h1>
                 <p className="text-purple-900 font-semibold text-lg sm:text-xl mt-4">
                     Pick a date, choose your therapy, and let wellness flow effortlessly.

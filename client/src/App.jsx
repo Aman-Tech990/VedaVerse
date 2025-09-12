@@ -10,6 +10,8 @@ import LoginPage from './pages/Login/LoginPage';
 import { RouterProvider } from 'react-router';
 import DoctorDashboard from './pages/Dashboard/DoctorDashboard';
 import ChatWindow from './pages/Chat/ChatWindow';
+import CenterPage from './pages/Center/CenterPage';
+import ClinicPage from './pages/Clinic/clinicPage';
 
 const appRouter = createBrowserRouter([
   {
@@ -47,6 +49,14 @@ const appRouter = createBrowserRouter([
       {
         path: "chat",
         element: <ChatWindow />
+      },
+      {
+        path: "center",
+        element: <CenterPage />
+      },
+      {
+        path: "clinic",
+        element: <ClinicPage />
       },
     ]
   }
