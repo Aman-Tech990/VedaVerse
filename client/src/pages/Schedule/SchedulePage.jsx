@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { FaCalendarAlt, FaClock, FaSpa, FaUserMd } from "react-icons/fa";
+import { Link } from "react-router";
 
 const therapyOptions = ["Vamana", "Virechana", "Basti", "Nasya", "Raktamokshana"];
 const doctorOptions = ["Dr. Sharma", "Dr. Mehta", "Dr. Kapoor", "Dr. Reddy"];
@@ -114,15 +115,17 @@ const SchedulePage = () => {
 
             {/* CTA */}
             <div className="flex justify-center">
-                <motion.button
-                    whileHover={{ scale: 1.07, boxShadow: "0 0 30px rgba(16,185,129,0.5)" }}
-                    whileTap={{ scale: 0.95 }}
-                    className="px-10 py-4 rounded-3xl bg-gradient-to-r from-green-500 to-emerald-600 text-white font-bold text-xl shadow-lg transition-all duration-300"
-                >
-                    Confirm Your Therapy
-                </motion.button>
+                <Link to="/payment">
+                    <motion.button
+                        whileHover={{ scale: 1.07, boxShadow: "0 0 30px rgba(16,185,129,0.5)" }}
+                        whileTap={{ scale: 0.95 }}
+                        className="px-10 py-4 rounded-3xl bg-gradient-to-r from-green-500 to-emerald-600 text-white font-bold text-xl shadow-lg transition-all duration-300 cursor-pointer"
+                    >
+                        Confirm Your Therapy
+                    </motion.button>
+                </Link>
             </div>
-        </div>
+        </div >
     );
 };
 

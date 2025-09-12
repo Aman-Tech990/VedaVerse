@@ -12,6 +12,7 @@ import DoctorDashboard from './pages/Dashboard/DoctorDashboard';
 import ChatWindow from './pages/Chat/ChatWindow';
 import CenterPage from './pages/Center/CenterPage';
 import ClinicPage from './pages/Clinic/clinicPage';
+import PaymentPage from './components/Payment';
 
 const appRouter = createBrowserRouter([
   {
@@ -57,6 +58,10 @@ const appRouter = createBrowserRouter([
       {
         path: "clinic",
         element: <ClinicPage />
+      },
+      {
+        path: "payment",
+        element: <PaymentPage />
       },
     ]
   }
